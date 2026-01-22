@@ -4,6 +4,24 @@
 
 Sistem Informasi Akademik ini dikembangkan menggunakan PHP dan MySQL untuk mendukung pengelolaan data akademik seperti mahasiswa, dosen, mata kuliah, nilai, dan pengguna sistem.
 
+### Galeri Aplikasi
+
+| Login | Dashboard |
+|-------|-----------|
+| ![Login Page](assets/screenshot_login.svg) | ![Dashboard Page](assets/screenshot_dashboard.svg) |
+
+| Mahasiswa | Dosen |
+|-----------|-------|
+| ![Mahasiswa Page](assets/screenshot_mahasiswa.svg) | ![Dosen Page](assets/screenshot_dosen.svg) |
+
+| Mata Kuliah | Nilai |
+|-------------|-------|
+| ![Matkul Page](assets/screenshot_matkul.svg) | ![Nilai Page](assets/screenshot_nilai.svg) |
+
+| User Management | |
+|-----------------|-|
+| ![User Page](assets/screenshot_user.svg) | |
+
 Sistem ini dirancang untuk kebutuhan pembelajaran dan simulasi akademik dengan menerapkan konsep CRUD, autentikasi berbasis session, serta dokumentasi kode menggunakan PHPDoc.
 
 ---

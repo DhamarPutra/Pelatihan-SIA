@@ -16,7 +16,6 @@
      * 
      * @package Root
      */
-    require_once('config/connect.php');
     header('Location: ./auth/login.php');
     ?>
 </body>
