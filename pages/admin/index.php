@@ -1,4 +1,13 @@
 <?php
+/**
+ * Admin Panel Layout
+ * 
+ * Main layout for the Admin section.
+ * Contains the sidebar and loads content dynamically via iframe.
+ * 
+ * @package Admin
+ */
+
 session_start();
 if (
     !isset($_SESSION['username']) ||

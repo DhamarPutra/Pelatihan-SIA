@@ -9,6 +9,13 @@
 
 <body>
     <?php
+    /**
+     * Main Entry Point
+     * 
+     * Redirects the user to the login page.
+     * 
+     * @package Root
+     */
     require_once('config/connect.php');
     header('Location: ./auth/login.php');
     ?>

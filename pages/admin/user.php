@@ -1,4 +1,13 @@
 <?php
+/**
+ * User Management Page
+ * 
+ * Helper for managing users (CRUD).
+ * Supports adding, editing, and deleting users (Admin, Dosen, Mahasiswa).
+ * 
+ * @package Admin
+ */
+
 require_once('../../config/connect.php');
 session_start();
 
@@ -7,6 +16,9 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'admin') {
     exit;
 }
 
+/**
+ * @var mysqli_result $result Result set of all users
+ */
 $result = mysqli_query($conn, "SELECT * FROM user");
 
 /* ================= TAMBAH ================= */

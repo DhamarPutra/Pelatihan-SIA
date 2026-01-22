@@ -1,4 +1,13 @@
 <?php
+/**
+ * Nilai Management Page
+ * 
+ * Helper for managing grades.
+ * Supports adding, editing, and deleting student grades.
+ * 
+ * @package Admin
+ */
+
 require_once('../../config/connect.php');
 session_start();
 
@@ -7,6 +16,9 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'admin') {
     exit;
 }
 
+/**
+ * @var string $query Query to fetch student grades with details
+ */
 $query = "
     SELECT nilai.id, nilai.nim, mahasiswa.nama AS nama_mhs,
            nilai.kode_matkul, matkul.nama_matkul, nilai.nilai
@@ -14,9 +26,20 @@ $query = "
     JOIN mahasiswa ON nilai.nim = mahasiswa.nim
     JOIN matkul ON nilai.kode_matkul = matkul.kode_matkul
 ";
+
+/**
+ * @var mysqli_result $result Result set of grades
+ */
 $result = mysqli_query($conn, $query);
 
+/**
+ * @var mysqli_result $mahasiswaResult List of all students for dropdown
+ */
 $mahasiswaResult = mysqli_query($conn, "SELECT nim, nama FROM mahasiswa");
+
+/**
+ * @var mysqli_result $matkulResult List of all courses for dropdown
+ */
 $matkulResult = mysqli_query($conn, "SELECT kode_matkul, nama_matkul FROM matkul");
 
 // TAMBAH

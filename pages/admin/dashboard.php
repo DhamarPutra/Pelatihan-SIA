@@ -1,4 +1,12 @@
 <?php
+/**
+ * Admin Dashboard
+ * 
+ * Displays key statistics of the system (Mahasiswa, Dosen, Matkul).
+ * 
+ * @package Admin
+ */
+
 require_once('../../config/connect.php');
 session_start();
 

@@ -1,4 +1,13 @@
 <?php
+/**
+ * Login Page
+ * 
+ * Handles user authentication and session initiation.
+ * Redirects users based on their role (admin, dosen, mahasiswa).
+ * 
+ * @package Auth
+ */
+
 require_once('../config/connect.php');
 session_start();
 
@@ -15,8 +24,18 @@ if (isset($_SESSION['level'])) {
     exit();
 }
 
+/**
+ * Handle Login Form Submission
+ */
 if (isset($_POST['login'])) {
+    /**
+     * @var string $username Input username
+     */
     $username = $_POST['username'];
+
+    /**
+     * @var string $password Input password
+     */
     $password = $_POST['password'];
 
     $cek_user = mysqli_query($conn, "select * from user where username = '$username'");
@@ -35,6 +54,9 @@ if (isset($_POST['login'])) {
                 header('Location: ../pages/mahasiswa/index.php');
             }
         } else {
+            /**
+             * @var string $alert_gagal_login Error message for failed login
+             */
             $alert_gagal_login = 'Username atau password salah';
         }
     } else {

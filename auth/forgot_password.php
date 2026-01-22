@@ -1,10 +1,25 @@
 <?php
+/**
+ * Forgot Password Page
+ * 
+ * Allows users to reset their password using their username.
+ * 
+ * @package Auth
+ */
+
 require_once('../config/connect.php');
 session_start();
 
 /* ================= RESET PASSWORD ================= */
 if (isset($_POST['reset'])) {
+    /**
+     * @var string $username Username to reset password for
+     */
     $username = mysqli_real_escape_string($conn, $_POST['username']);
+
+    /**
+     * @var string $password New hashed password
+     */
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     // cek username valid

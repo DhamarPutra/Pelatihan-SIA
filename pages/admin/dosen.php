@@ -1,4 +1,13 @@
 <?php
+/**
+ * Dosen Management Page
+ * 
+ * Helper for managing lecturers (CRUD).
+ * Supports adding, editing, and deleting lecturer data.
+ * 
+ * @package Admin
+ */
+
 require_once('../../config/connect.php');
 session_start();
 
@@ -8,6 +17,9 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'admin') {
 }
 
 // CRUD DOSEN
+/**
+ * @var mysqli_result $result Result set of all dosen
+ */
 $result = mysqli_query($conn, "SELECT * FROM dosen");
 
 // TAMBAH

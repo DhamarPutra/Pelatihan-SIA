@@ -1,4 +1,13 @@
 <?php
+/**
+ * Mata Kuliah Management Page
+ * 
+ * Helper for managing courses (CRUD).
+ * Supports adding, editing, and deleting course data.
+ * 
+ * @package Admin
+ */
+
 require_once('../../config/connect.php');
 session_start();
 
@@ -7,6 +16,9 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'admin') {
     exit;
 }
 
+/**
+ * @var mysqli_result $result Result set of all courses
+ */
 $result = mysqli_query($conn, "SELECT * FROM matkul");
 
 // TAMBAH
