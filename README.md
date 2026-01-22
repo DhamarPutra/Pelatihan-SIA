@@ -55,13 +55,28 @@ project/
 
 ---
 
-## Dokumentasi Kode
+## Dokumentasi & PHPDoc
 
-Dokumentasi kode dibuat menggunakan standar PHPDoc dan dapat di-generate menggunakan:
+### 1. Instalasi PHPDoc (via Composer)
 
+Jika belum memiliki Composer, silakan install terlebih dahulu. Kemudian jalankan perintah berikut di terminal project:
+
+```bash
+composer require --dev phpdocumentor/phpdocumentor
 ```
+
+### 2. Generate Dokumentasi
+
+Setelah terinstal, jalankan perintah berikut untuk membuat dokumentasi HTML statis:
+
+```bash
 vendor/bin/phpdoc -d . -t docs
 ```
+
+*   `-d .` : Scan direktori saat ini (project root)
+*   `-t docs` : Output dokumentasi ke folder `docs/`
+
+Buka `docs/index.html` di browser untuk melihat hasilnya.
 
 ---
 
