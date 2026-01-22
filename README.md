@@ -16,7 +16,7 @@ Sistem Informasi Akademik ini dikembangkan menggunakan PHP dan MySQL untuk mendu
 
 | Mata Kuliah | Nilai |
 |-------------|-------|
-| ![Matkul Page](assets/screenshot_matkul.svg) | ![Nilai Page](assets/screenshot_nilai.svg) |
+| ![Matkul Page](assets/screenshot_matkul.png) | ![Nilai Page](assets/screenshot_nilai.png) |
 
 | User Management | |
 |-----------------|-|
