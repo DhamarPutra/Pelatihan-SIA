@@ -1,0 +1,8 @@
+{
+    "name": "dhamarputra/pelatihan-sia",
+    "description": "Sistem Informasi Akademik Berbasis Web",
+    "license": "proprietary",
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "^3.9"
+    }
+}

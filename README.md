@@ -70,11 +70,10 @@ composer require --dev phpdocumentor/phpdocumentor
 Setelah terinstal, jalankan perintah berikut untuk membuat dokumentasi HTML statis:
 
 ```bash
-vendor/bin/phpdoc -d . -t docs
+vendor/bin/phpdoc
 ```
 
-*   `-d .` : Scan direktori saat ini (project root)
-*   `-t docs` : Output dokumentasi ke folder `docs/`
+Perintah akan otomatis membaca konfigurasi dari `phpdoc.dist.xml`.
 
 Buka `docs/index.html` di browser untuk melihat hasilnya.
 

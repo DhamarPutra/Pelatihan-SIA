@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor configVersion="3">
+    <title>Sistem Informasi Akademik</title>
+    <paths>
+        <output>docs</output>
+        <cache>.phpdoc/cache</cache>
+    </paths>
+    <version number="1.0.0">
+        <api>
+            <source dsn=".">
+                <path>auth/**/*</path>
+                <path>config/**/*</path>
+                <path>pages/**/*</path>
+                <path>index.php</path>
+            </source>
+            <ignore>
+                <path>vendor/**/*</path>
+                <path>docs/**/*</path>
+            </ignore>
+        </api>
+    </version>
+</phpdocumentor>
